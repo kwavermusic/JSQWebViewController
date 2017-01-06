@@ -84,6 +84,7 @@ open class WebViewController: UIViewController {
         let progressBar = UIProgressView(progressViewStyle: .bar)
         progressBar.backgroundColor = .clear
         progressBar.trackTintColor = .clear
+        progressBar.progressTintColor = UIColor.init(red: 255.0/255, green: 88.0/255, blue: 107.0/255, alpha: 1.0)
         self.view.addSubview(progressBar)
         return progressBar
         }()
@@ -138,6 +139,7 @@ open class WebViewController: UIViewController {
         super.viewDidLoad()
         title = urlRequest.url?.host
 
+   
         if presentingViewController?.presentedViewController != nil {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                                target: self,
